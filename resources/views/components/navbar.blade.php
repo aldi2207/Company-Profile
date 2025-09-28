@@ -2,8 +2,7 @@
 
     <!-- Header & Navigasi -->
     <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-2 lg:px-8 shadow-lg shadow-amber-300/50 bg-amber-200"
-            aria-label="Global">
+        <nav class="flex items-center justify-between p-2 lg:px-8 shadow-lg shadow-grey-300/50" aria-label="Global">
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5 rounded-lg focus:outline-none focus:ring focus:ring-indigo-300">
                     <span class="sr-only">Your Company</span>
@@ -23,17 +22,17 @@
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
                 <a href="/"
-                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition">Home</a>
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition">Home</a>
                 <a href="/about"
-                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition">About</a>
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition">About</a>
                 <a href="/contact"
-                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition">Contact</a>
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition">Contact</a>
                 <a href="/artikel"
-                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition">Article</a>
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition">Article</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#"
-                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition">Log in <span
-                        aria-hidden="true">&rarr;</span></a>
+                <a id = "open-login-modal" type = "button"
+                    class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition hover cursor-pointer">Log
+                    in <span aria-hidden="true">&rarr;</span></a>
             </div>
         </nav>

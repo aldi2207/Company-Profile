@@ -1,6 +1,6 @@
 <x-header>Artikel</x-header>
 <x-navbar></x-navbar>
-
+<x-mobile-menu></x-mobile-menu>
 <main class="isolate pt-24 px-6 lg:px-8">
     <section id="article-detail" class="mx-auto max-w-4xl py-12 sm:py-16 lg:py-20">
 
@@ -19,11 +19,12 @@
         </div>
         <div class="pt-10">
             <a href="/artikel"
-                class="inline-block px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition">
+                class="inline-block px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-amber-600 hover:bg-amber-700 transition">
                 &laquo; Kembali
             </a>
         </div>
 
     </section>
 </main>
+<x-modal-login></x-modal-login>
 <x-footer></x-footer>
