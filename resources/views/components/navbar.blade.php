@@ -29,10 +29,24 @@
                     class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition">Contact</a>
                 <a href="/artikel"
                     class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition">Article</a>
+                @if (Auth::guard('admin')->check())
+                    <a href="/dashboard"
+                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition">Dashboard</a>
+            </div>
+            {{-- Tombol Logout --}}
+            <form method="POST" action="{{ route('logout') }}" class="hidden lg:flex lg:flex-1 lg:justify-end">
+                @csrf
+                <button type="submit"
+                    class="logout-btn rounded-md bg-gray-200 px-3.5 py-2 text-sm font-semibold text-gray-800 shadow-xs hover:bg-gray-300">
+                    Logout
+                </button>
+            </form>
+        @else
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a id = "open-login-modal" type = "button"
                     class="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-600 transition hover cursor-pointer">Log
                     in <span aria-hidden="true">&rarr;</span></a>
             </div>
+            @endif
         </nav>

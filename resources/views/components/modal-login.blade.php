@@ -16,7 +16,8 @@
 
         <h3 class="text-2xl font-bold tracking-tight text-gray-900">Sign in to your account</h3>
 
-        <form action="#" method="POST" class="mt-8 space-y-6">
+        <form action="{{ route('login') }}" method="POST" class="mt-8 space-y-6">
+            @csrf
             <div>
                 <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                 <div class="mt-2">
