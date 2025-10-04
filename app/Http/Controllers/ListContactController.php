@@ -13,4 +13,10 @@ class ListContactController extends Controller
         $data = contact::all();
         return view('/listcontact', compact('data'));
     }
+
+    public function detailcontact($id)
+    {
+        $dataId = contact::findOrFail($id);
+        return view('/contactdetail', compact('dataId'));
+    }
 }

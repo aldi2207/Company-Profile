@@ -75,8 +75,7 @@
                 </h2>
                 <ul class="text-gray-600 space-y-2">
                     <li><a href="artikel" class="text-sm hover:text-amber-600">Lihat Postingan Anda</a></li>
-                    <li><a href="/" class="text-sm hover:text-amber-600">Laporkan Masalah</a></li>
-                    <li><a href="/" class="text-sm hover:text-amber-600">List Contact From User</a></li>
+                    <li><a href="/listcontact" class="text-sm hover:text-amber-600">List Contact From User</a></li>
                 </ul>
             </div>
         </div>

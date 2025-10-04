@@ -14,7 +14,6 @@
     <div class="mx-auto max-w-7xl">
         <div class="text-center mb-10">
             <h1 class="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Kotak Masuk Pesan</h1>
-            <p class="mt-4 text-lg text-gray-500">Daftar semua pesan yang diterima melalui formulir kontak.</p>
         </div>
 
         <div class="overflow-hidden shadow-xl ring-1 ring-gray-900/5 sm:rounded-lg bg-white">
@@ -38,39 +37,29 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200 bg-white">
-
-                        {{-- Looping data pesan (asumsi variabel $pesans tersedia) --}}
-                        @forelse ($data as $pesan)
-                            <tr class="hover:bg-amber-50/50">
-                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
-                                    {{ $pesan->nama_lengkap }}
-                                </td>
-                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                                    {{ $pesan->email }}
-                                </td>
-                                <td class="py-4 px-3 text-sm text-gray-500 max-w-md truncate">
-                                    {{ Str::limit($pesan->pesan, 200) }}
-                                </td>
-                                <td
-                                    class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                                    <a href="/listcontact/{{ $pesan->id }}"
-                                        class="text-amber-600 hover:text-amber-900">Lihat
-                                        Detail</a>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="4" class="text-center py-10 text-gray-500">
-                                    <p>Tidak ada pesan yang masuk saat ini.</p>
-                                </td>
-                            </tr>
-                        @endforelse
-
+                        <tr class="hover:bg-amber-50/50">
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
+                                {{ $dataId->nama_lengkap }}
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                                {{ $dataId->email }}
+                            </td>
+                            <td class="py-4 px-3 text-sm text-gray-500 max-w-md">
+                                {{ $dataId->pesan }}
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+        <div class="pt-10">
+            <a href="/listcontact"
+                class="inline-block px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-amber-600 hover:bg-amber-700 transition">
+                &laquo; Kembali
+            </a>
+        </div>
     </div>
+
 
     {{-- Decorative Background Bottom (Consistent with Home) --}}
     <div aria-hidden="true"

@@ -38,6 +38,7 @@ Route::get('/dashboard', function () {
     return view('/dashboard');
 })->middleware('auth:admin')->name('dashboard');
 Route::get('/listcontact', [ListContactController::class, 'index'])->middleware('auth:admin')->name('admin.contact');
+Route::get('/listcontact/{id}', [ListContactController::class, 'detailcontact'])->middleware('auth:admin')->name('admin.contactdetail');
 route::get('/login', function () {
     return redirect()->route('home');
 })->name('login');
